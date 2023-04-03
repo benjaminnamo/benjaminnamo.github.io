@@ -2705,16 +2705,16 @@ input, select, textarea {
 /* Header */
 
 	#header {
-		background-attachment: scroll,							scroll,					fixed;
-		background-image: url("images/top-3200.svg"), url("images/overlay.png"), url("../../images/header.jpg");
-		background-position: bottom center,					top left,				center center;
-		background-repeat: repeat-x,						repeat,					no-repeat;
-		background-size: 3200px 460px,					auto,					cover;
-		color: rgba(255, 255, 255, 0.8);
-		padding: 10em 0 20em 0;
-		position: relative;
-		text-align: center;
-	}
+	background-attachment: scroll;
+	background-image: url("../../images/header.jpg"), url("images/overlay.png");
+	background-position: center center, center center;
+	background-repeat: no-repeat, repeat;
+	background-size: cover, auto;
+	color: rgba(255, 255, 255, 0.8);
+	padding: 10em 0 20em 0;
+	position: relative;
+	text-align: center;
+}
 
 		#header:before, #header:after {
 			background: rgba(224, 224, 224, 0.75);
