@@ -1,76 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quirky Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
-</head>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+}
 
-<body>
-  <header>
-    <h1>Quirky Portfolio</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
 
-  <section id="about">
-    <div class="content">
-      <h2>About Me</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum condimentum enim a congue finibus. Suspendisse id est eu nisi hendrerit gravida. Sed fermentum vitae sem id efficitur.</p>
-      <img src="profile.jpg" alt="Profile Picture">
-    </div>
-  </section>
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
 
-  <section id="projects">
-    <div class="content">
-      <h2>Projects</h2>
-      <div class="project">
-        <img src="project1.jpg" alt="Project 1">
-        <h3>Project 1</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-      <div class="project">
-        <img src="project2.jpg" alt="Project 2">
-        <h3>Project 2</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-    </div>
-  </section>
+nav ul {
+  list-style-type: none;
+}
 
-  <section id="contact">
-    <div class="content">
-      <h2>Contact Me</h2>
-      <form>
-        <input type="text" placeholder="Name">
-        <input type="email" placeholder="Email">
-        <textarea placeholder="Message"></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-  </section>
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
 
-  <footer>
-    <p>&copy; 2023 Quirky Portfolio. All rights reserved.</p>
-  </footer>
-</body>
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
 
-</html>
+section {
+  padding: 40px 20px;
+  text-align: center;
+}
 
-      <h2>Projects</h2>
-      <!-- Add your project details here -->
-    </div>
-  </section>
+h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
 
-  <footer>
-    <p>&copy; 2023 My Portfolio</p>
-  </footer>
-</body>
-</html>
+.content {
+  max-width: 800px;
+  margin: 0
