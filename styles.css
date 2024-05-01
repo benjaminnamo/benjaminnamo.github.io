@@ -13,7 +13,7 @@ body {
     width: auto;             /* Maintains intrinsic width */
     height: auto;            /* Maintains intrinsic height */
     flex: none;              /* No resizing */
-    margin-bottom: -100px;   /* Moves elements below it upwards, closer to the card */
+    margin-bottom: -90px;   /* Moves elements below it upwards, closer to the card */
 }
 
 #baseText, #playButton {
@@ -26,13 +26,13 @@ body {
 #baseText {
     font-size: 24px;
     position: relative;
-    top: -120px;             /* Adjusts position upwards, closer or onto the card */
+    top: -100px;             /* Adjusts position upwards, closer or onto the card */
 }
 
 #playButton {
     position: relative;
     top: -140px;             /* Further adjust this value to reduce overlap */
-    margin-top: 20px;        /* Space above the button, adjust if necessary */
+    margin-top: 50px;        /* Space above the button, adjust if necessary */
 }
 
 #playButton a {
