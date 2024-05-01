@@ -1,60 +1,57 @@
-body { 
-    margin: 0; 
+body, html {
+    height: 100%;
+    margin: 0;
     padding: 0;
-    height: 100vh; 
-    display: flex; 
-    flex-direction: column;
-    align-items: center; 
+    display: flex;
     justify-content: center;
-    background: #000;
-    font-family: 'Courier New', Courier, monospace; /* Typewriter-like font */
-    overflow: hidden; /* Ensures no  scrollbars appear */
+    align-items: center;
+    background-color: #000;
+    overflow: hidden; /* This prevents any scrolling due to overflowing elements */
+    font-family: 'Courier New', Courier, monospace;
 }
-#card3D { 
-    width: 50vw; 
-    height: 50vh; 
-    position: absolute; /* Keeps the card floating above */
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); /* Precisely center the card */
-    z-index: 2; /* Ensures it is above other content */
+
+#card3D {
+    position: absolute; /* This will take it out of the normal flow */
+    width: 50vw; /* Half of the viewport width */
+    height: 50vh; /* Half of the viewport height */
+    z-index: 1;
 }
+
+.content {
+    position: absolute;
+    top: 55vh; /* Starts just below the middle of the viewport */
+    width: 100%;
+    text-align: center;
+    z-index: 0;
+}
+
 .glow {
     text-shadow: 0 0 8px #0052ff;
     color: #0052ff;
 }
-.content {
-    position: relative; /* Relative to body */
-    top: 30vh; /* Adjust based on your specific needs */
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
-    z-index: 1; /* Lower than the card */
-}
+
 .divider {
-    width: 80%; 
+    width: 80%;
     border-bottom: 1px solid white;
-    margin: 20px 0;
+    margin: 20px auto;
 }
+
 .footer {
-    position: fixed;
-    bottom: 10px;
+    position: absolute;
+    bottom: 0;
     width: 100%;
     text-align: center;
     font-size: 0.75em;
     color: white;
 }
+
 .links, .button-container {
     display: flex;
     justify-content: center;
-    width: 100%;
+    flex-direction: column; /* Stacks links and buttons vertically */
+    margin-top: 20px;
 }
-.links a {
-    margin: 0 15px;
-}
-.button-container {
-    margin: 20px 0;
-}
+
 button {
     background-color: #0052ff;
     border: none;
@@ -65,7 +62,9 @@ button {
     font-size: 1em;
     transition: background-color 0.3s;
 }
+
 button:hover {
     background-color: #0039cc;
 }
+
 
