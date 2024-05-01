@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function randomGlitch() {
         const minTime = 5000; // 5 seconds
         const maxTime = 20000; // 20 seconds
-        const glitchCount = Math.floor(Math.random() * 2) + 2; // 2 or 3 glitches
+        const glitchCount = Math.floor(Math.random() * 2) + 1; // 1 or 2 glitches
         
         function triggerGlitch() {
             const button = document.querySelector('#playButton a');
