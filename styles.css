@@ -35,6 +35,27 @@ body {
     margin-top: 75px;        /* Space above the button, adjust if necessary */
 }
 
+@keyframes glitch-effect {
+  0%, 100% {
+    color: white;
+    text-shadow: none;
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  10%, 30%, 50%, 70% {
+    color: #ff00ff; /* Change text color abruptly */
+    text-shadow: 5px 0 red; /* Add a red shadow to text */
+    transform: translate(-5px, 5px); /* Shift the text position */
+    opacity: 0.8; /* Slightly reduce opacity */
+  }
+  90% {
+    color: #00ffff; /* Another abrupt change to cyan */
+    text-shadow: -5px 0 blue; /* Add a blue shadow */
+    transform: translate(5px, -5px); /* Reverse shift position */
+    opacity: 0.9; /* Change opacity again */
+  }
+}
+
 #playButton a {
     font-size: 24px;
     background-color: #0052ff;
@@ -45,6 +66,12 @@ body {
     box-shadow: 0 0 10px #0052ff, 0 0 20px #0052ff, 0 0 30px #0052ff, 0 0 40px #0052ff;
     transition: background-color 0.3s, box-shadow 0.3s;
 }
+
+#playButton a {
+    animation: glitch-effect 1s ease-in-out infinite;
+    animation-delay: 3s; /* Starts after a delay of 3 seconds */
+}
+
 
 #playButton a:hover {
     background-color: #0037b3;
