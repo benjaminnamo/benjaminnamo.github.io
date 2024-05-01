@@ -32,7 +32,7 @@ body {
 #playButton {
     position: relative;
     top: -140px;             /* Further adjust this value to reduce overlap */
-    margin-top: 50px;        /* Space above the button, adjust if necessary */
+    margin-top: 75px;        /* Space above the button, adjust if necessary */
 }
 
 #playButton a {
