@@ -1,3 +1,25 @@
+document.addEventListener("DOMContentLoaded", function() {
+    function randomGlitch() {
+        const minTime = 5000; // 5 seconds
+        const maxTime = 20000; // 20 seconds
+        const randomDelay = Math.floor(Math.random() * (maxTime - minTime + 1) + minTime);
+        
+        setTimeout(function() {
+            const button = document.querySelector('#playButton a');
+            button.style.animation = 'glitch-effect 0.5s ease-in-out';
+            // Reset the animation
+            setTimeout(() => {
+                button.style.animation = 'none';
+            }, 500); // End the glitch after 0.5 seconds
+            
+            randomGlitch(); // Re-run this function to schedule the next glitch
+        }, randomDelay);
+    }
+
+    randomGlitch(); // Start the glitch effect loop
+});
+
+
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
