@@ -13,7 +13,7 @@ const geometry = new THREE.BoxGeometry(2, 3, 0.1);
 const materialFront = new THREE.MeshBasicMaterial({ map: textureFront });
 const materialBack = new THREE.MeshBasicMaterial({ map: textureBack });
 const materials = [
-    new THREE.MeshBasicMaterial({ color: 0x333333 }), // side colors
+    new THREE.MeshBasicMaterial({ color: 0x333333 }),
     new THREE.MeshBasicMaterial({ color: 0x333333 }),
     new THREE.MeshBasicMaterial({ color: 0x333333 }),
     new THREE.MeshBasicMaterial({ color: 0x333333 }),
@@ -29,4 +29,13 @@ function animate() {
     card.rotation.y += 0.01;
     renderer.render(scene, camera);
 }
+
+window.addEventListener('resize', onWindowResize, false);
+
+function onWindowResize() {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+}
+
 animate();
