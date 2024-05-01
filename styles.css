@@ -43,7 +43,7 @@ body {
     opacity: 1;
   }
   10%, 90% {
-    color: #ff00ff; /* Bright magenta */
+    color: rgba(255, 255, 255, 0.5); /* Translucent white */
     text-shadow: 5px 0 red, -5px 0 blue; /* Multi-directional shadow */
     transform: translate(-5px, 5px); /* Jumpy shift */
     opacity: 0.8;
