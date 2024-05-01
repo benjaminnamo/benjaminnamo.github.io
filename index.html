@@ -21,8 +21,8 @@
         document.getElementById('card3D').appendChild(renderer.domElement);
 
         const loader = new THREE.TextureLoader();
-        const textureFront = loader.load('path/to/your/front-image.jpg');
-        const textureBack = loader.load('path/to/your/back-image.jpg');
+        const textureFront = loader.load('cardfront.png');
+        const textureBack = loader.load('cardback.png');
 
         const geometry = new THREE.BoxGeometry(2, 3, 0.1);
         const materialFront = new THREE.MeshBasicMaterial({ map: textureFront });
