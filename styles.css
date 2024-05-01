@@ -2,25 +2,32 @@ body {
     margin: 0;
     height: 100vh;
     display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;  /* Centers vertically */
+    align-items: center;      /* Centers horizontally */
     background: #000;
 }
+
 #card3D {
-    width: auto;  /* Adjust based on the aspect ratio of the card */
-    height: auto; /* Height adjusts automatically */
-    flex: none;  /* This prevents flexbox from resizing the container automatically */
+    width: auto;  /* This allows the element to maintain its intrinsic width */
+    height: auto; /* This allows the element to maintain its intrinsic height */
+    flex: none;   /* This prevents the element from growing or shrinking */
+    margin-bottom: 20px; /* Reduce or adjust this value as needed to bring the text closer */
 }
 
 #baseText, #playButton {
+    width: 100%;  /* Ensures these elements take up full width for center alignment */
     text-align: center;
     color: white;
     font-family: 'Orbitron', sans-serif;
+    position: relative; /* This might help control spacing more explicitly if needed */
 }
+
 #baseText {
     font-size: 24px;
+    margin-top: -20px; /* Adjust this value to reduce space between card and text */
 }
+
 #playButton a {
     font-size: 24px;
     background-color: #0052ff;
@@ -31,11 +38,13 @@ body {
     box-shadow: 0 0 10px #0052ff, 0 0 20px #0052ff, 0 0 30px #0052ff, 0 0 40px #0052ff;
     transition: background-color 0.3s, box-shadow 0.3s;
 }
+
 #playButton a:hover {
     background-color: #0037b3;
     box-shadow: 0 0 15px #007bff, 0 0 25px #007bff, 0 0 35px #007bff, 0 0 45px #007bff;
 }
+
 #playButton {
-    margin-top: 20px; /* Space above the button */
+    margin-top: 0px; /* Set to 0px or adjust to reduce space between text and button */
 }
 
