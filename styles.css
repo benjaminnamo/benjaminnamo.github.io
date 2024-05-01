@@ -42,18 +42,16 @@ body {
     transform: translate(0, 0);
     opacity: 1;
   }
-  10%, 30%, 50%, 70% {
-    color: #ff00ff; /* Change text color abruptly */
-    text-shadow: 5px 0 red; /* Add a red shadow to text */
-    transform: translate(-5px, 5px); /* Shift the text position */
-    opacity: 0.8; /* Slightly reduce opacity */
+  10%, 90% {
+    color: #ff00ff; /* Bright magenta */
+    text-shadow: 5px 0 red, -5px 0 blue; /* Multi-directional shadow */
+    transform: translate(-5px, 5px); /* Jumpy shift */
+    opacity: 0.8;
   }
-  90% {
-    color: #00ffff; /* Another abrupt change to cyan */
-    text-shadow: -5px 0 blue; /* Add a blue shadow */
-    transform: translate(5px, -5px); /* Reverse shift position */
-    opacity: 0.9; /* Change opacity again */
-  }
+}
+
+#playButton a {
+    transition: color 0.5s, text-shadow 0.5s, transform 0.5s, opacity 0.5s; /* Smooth transitions */
 }
 
 #playButton a {
@@ -66,12 +64,6 @@ body {
     box-shadow: 0 0 10px #0052ff, 0 0 20px #0052ff, 0 0 30px #0052ff, 0 0 40px #0052ff;
     transition: background-color 0.3s, box-shadow 0.3s;
 }
-
-#playButton a {
-    animation: glitch-effect 11s ease-in-out infinite;
-    animation-delay: 3s; /* Starts after a delay of 3 seconds */
-}
-
 
 #playButton a:hover {
     background-color: #0037b3;
