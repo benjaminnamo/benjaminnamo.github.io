@@ -1,23 +1,25 @@
 document.addEventListener("DOMContentLoaded", function() {
     function randomGlitch() {
-        const minTime = 5000; // 5 seconds
-        const maxTime = 20000; // 20 seconds
-        const glitchCount = Math.floor(Math.random() * 2) + 1; // 1 or 2 glitches
+        const minTimeBetweenGlitches = 5000; // 5 seconds minimum between glitches
+        const maxTimeBetweenGlitches = 20000; // 20 seconds maximum between glitches
+        const glitchCount = Math.floor(Math.random() * 2) + 1; // 1 or 2 glitches per occurrence
         
         function triggerGlitch() {
             const button = document.querySelector('#playButton a');
-            button.style.animation = 'glitch-effect 0.5s ease-in-out';
+            const glitchDuration = Math.floor(Math.random() * (3000 - 100 + 1) + 100); // Random duration between 100ms and 3000ms
+            button.style.animation = `glitch-effect ${glitchDuration}ms ease-in-out`;
             setTimeout(() => {
                 button.style.animation = 'none';
-            }, 500); // End the glitch after 0.5 seconds
+            }, glitchDuration); // End the glitch after the random duration
         }
 
         for (let i = 0; i < glitchCount; i++) {
-            setTimeout(triggerGlitch, i * 600); // Trigger each glitch 600 ms apart
+            const waitTime = i * 1000; // Waiting 1 second between multiple glitches in the same occurrence
+            setTimeout(triggerGlitch, waitTime); // Trigger each glitch 1 second apart
         }
 
-        const randomDelay = Math.floor(Math.random() * (maxTime - minTime + 1) + minTime);
-        setTimeout(randomGlitch, randomDelay + glitchCount * 600); // Schedule the next round of glitches
+        const randomDelayBetweenGlitches = Math.floor(Math.random() * (maxTimeBetweenGlitches - minTimeBetweenGlitches + 1) + minTimeBetweenGlitches);
+        setTimeout(randomGlitch, randomDelayBetweenGlitches + glitchCount * 1000); // Schedule the next round of glitches
     }
 
     randomGlitch(); // Start the glitch effect loop
