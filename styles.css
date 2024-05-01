@@ -68,7 +68,7 @@ body {
 }
 
 #playButton a {
-    animation: glitch-effect 1s ease-in-out infinite;
+    animation: glitch-effect 11s ease-in-out infinite;
     animation-delay: 3s; /* Starts after a delay of 3 seconds */
 }
 
