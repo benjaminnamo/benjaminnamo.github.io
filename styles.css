@@ -13,7 +13,7 @@ body {
     width: auto;             /* Maintains intrinsic width */
     height: auto;            /* Maintains intrinsic height */
     flex: none;              /* No resizing */
-    margin-bottom: -90px;   /* Moves elements below it upwards, closer to the card */
+    margin-bottom: -70px;   /* Moves elements below it upwards, closer to the card */
 }
 
 #baseText, #playButton {
