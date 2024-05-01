@@ -2,22 +2,27 @@ document.addEventListener("DOMContentLoaded", function() {
     function randomGlitch() {
         const minTime = 5000; // 5 seconds
         const maxTime = 20000; // 20 seconds
-        const randomDelay = Math.floor(Math.random() * (maxTime - minTime + 1) + minTime);
+        const glitchCount = Math.floor(Math.random() * 2) + 2; // 2 or 3 glitches
         
-        setTimeout(function() {
+        function triggerGlitch() {
             const button = document.querySelector('#playButton a');
             button.style.animation = 'glitch-effect 0.5s ease-in-out';
-            // Reset the animation
             setTimeout(() => {
                 button.style.animation = 'none';
             }, 500); // End the glitch after 0.5 seconds
-            
-            randomGlitch(); // Re-run this function to schedule the next glitch
-        }, randomDelay);
+        }
+
+        for (let i = 0; i < glitchCount; i++) {
+            setTimeout(triggerGlitch, i * 600); // Trigger each glitch 600 ms apart
+        }
+
+        const randomDelay = Math.floor(Math.random() * (maxTime - minTime + 1) + minTime);
+        setTimeout(randomGlitch, randomDelay + glitchCount * 600); // Schedule the next round of glitches
     }
 
     randomGlitch(); // Start the glitch effect loop
 });
+
 
 
 const scene = new THREE.Scene();
