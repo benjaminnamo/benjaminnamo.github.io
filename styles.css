@@ -8,9 +8,11 @@ body {
     background: #000;
 }
 #card3D {
-    width: 50%;  /* You can adjust this width as needed */
-    height: 50vh; /* Adjust height as needed */
+    width: auto;  /* Adjust based on the aspect ratio of the card */
+    height: auto; /* Height adjusts automatically */
+    flex: none;  /* This prevents flexbox from resizing the container automatically */
 }
+
 #baseText, #playButton {
     text-align: center;
     color: white;
