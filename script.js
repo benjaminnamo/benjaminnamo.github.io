@@ -1,28 +1,29 @@
 document.addEventListener("DOMContentLoaded", function() {
-    function randomGlitch() {
-        const minTimeBetweenGlitches = 5000; // 5 seconds minimum between glitches
-        const maxTimeBetweenGlitches = 20000; // 20 seconds maximum between glitches
-        const glitchCount = Math.floor(Math.random() * 2) + 1; // 1 or 2 glitches per occurrence
-        
-        function triggerGlitch() {
+    function randomFlicker() {
+        const flickerCount = Math.floor(Math.random() * 4) + 3; // 3 to 6 flickers per occurrence
+        let currentFlicker = 0;
+
+        function triggerFlicker() {
             const button = document.querySelector('#playButton a');
-            const glitchDuration = Math.floor(Math.random() * (3000 - 100 + 1) + 100); // Random duration between 100ms and 3000ms
-            button.style.animation = `glitch-effect ${glitchDuration}ms ease-in-out`;
-            setTimeout(() => {
-                button.style.animation = 'none';
-            }, glitchDuration); // End the glitch after the random duration
+            button.style.animation = 'none'; // Reset animation to clear previous settings
+            button.style.animation = 'flicker-effect 0.1s ease-in-out forwards'; // Apply flickering effect
+            
+            if (++currentFlicker < flickerCount) {
+                setTimeout(triggerFlicker, 100); // Trigger next flicker after 100 ms
+            } else {
+                setTimeout(() => {
+                    button.style.animation = 'none'; // Clear the animation after the last flicker
+                }, 100);
+            }
         }
 
-        for (let i = 0; i < glitchCount; i++) {
-            const waitTime = i * 1000; // Waiting 1 second between multiple glitches in the same occurrence
-            setTimeout(triggerGlitch, waitTime); // Trigger each glitch 1 second apart
-        }
+        triggerFlicker(); // Start the flickering effect
 
-        const randomDelayBetweenGlitches = Math.floor(Math.random() * (maxTimeBetweenGlitches - minTimeBetweenGlitches + 1) + minTimeBetweenGlitches);
-        setTimeout(randomGlitch, randomDelayBetweenGlitches + glitchCount * 1000); // Schedule the next round of glitches
+        const nextFlickerDelay = Math.floor(Math.random() * (10000 - 3000 + 1) + 3000); // 3 to 10 seconds until next flicker session
+        setTimeout(randomFlicker, nextFlickerDelay); // Schedule the next round of flickers
     }
 
-    randomGlitch(); // Start the glitch effect loop
+    randomFlicker(); // Start the flicker effect loop
 });
 
 
