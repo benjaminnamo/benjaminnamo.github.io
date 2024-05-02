@@ -35,23 +35,6 @@ body {
     margin-top: 75px;        /* Space above the button, adjust if necessary */
 }
 
-@keyframes flicker-effect {
-    0%, 100% {
-        opacity: 1; /* Fully visible */
-        color: white;
-    }
-    50% {
-        opacity: 0; /* Fully transparent */
-        color: rgba(255, 255, 255, 0.6); /* Translucent white when barely visible */
-    }
-}
-
-#playButton a {
-    transition: opacity 0.1s ease-in-out; /* Smooth transition for flickering effect */
-}
-
-
-
 #playButton a {
     font-size: 24px;
     background-color: #0052ff;
