@@ -35,24 +35,21 @@ body {
     margin-top: 75px;        /* Space above the button, adjust if necessary */
 }
 
-@keyframes glitch-effect {
-  0%, 100% {
-    color: white;
-    text-shadow: none;
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-  10%, 90% {
-    color: rgba(255, 255, 255, 0.6); /* Translucent white */
-    text-shadow: none; /* No additional shadows for simplicity */
-    transform: translate(-5px, 5px); /* Jumpy shift */
-    opacity: 0.8;
-  }
+@keyframes flicker-effect {
+    0%, 100% {
+        opacity: 1; /* Fully visible */
+        color: white;
+    }
+    50% {
+        opacity: 0; /* Fully transparent */
+        color: rgba(255, 255, 255, 0.6); /* Translucent white when barely visible */
+    }
 }
 
 #playButton a {
-    transition: color 0.5s, transform 0.5s, opacity 0.5s; /* Smooth transitions */
+    transition: opacity 0.1s ease-in-out; /* Smooth transition for flickering effect */
 }
+
 
 
 #playButton a {
