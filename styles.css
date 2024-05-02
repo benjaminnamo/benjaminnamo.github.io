@@ -9,7 +9,7 @@ body {
     overflow: hidden;         /* Hides any scroll bars that might appear */
 }
 
-#card3D {
+#card3D { 
     width: auto;             /* Maintains intrinsic width */
     height: auto;            /* Maintains intrinsic height */
     flex: none;              /* No resizing */
