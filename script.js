@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     function randomFlicker() {
-        const flickerCount = Math.floor(Math.random() * 4) + 3; // 3 to 6 flickers per occurrence
+        const flickerCount = Math.floor(Math.random() * 4) + 3; // 3 to 6 flickers per occurrence 
         let currentFlicker = 0;
 
         function triggerFlicker() {
